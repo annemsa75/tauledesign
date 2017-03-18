@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using tauledesign.Models;
 
 namespace tauledesign.Controllers
 {
@@ -15,16 +16,24 @@ namespace tauledesign.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Her kommer cv";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
+
+        public ActionResult Work()
+        {
+            var list = new List<Article>
+            {
+                new Article {Title = "Kjole", Category = "Dresses", Ordinal = 1}
+            };
+            return View(list);
+        }
+
     }
 }
