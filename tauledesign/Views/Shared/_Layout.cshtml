@@ -3,27 +3,28 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title tauledesign</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header taule-header">
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("tauledesign", "Index", "Home", new { area = "" }, new { @class = "navbar-brand taule-navbar-brand" })
+                @Html.ActionLink("tauledesign", "Work", "Home", new { area = "" }, new { @class = "navbar-brand taule-navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Work", "Work", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Work", "Work", "Home")</li>
+
                 </ul>
             </div>
         </div>
@@ -32,7 +33,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - tauledesign</p>
+            <p><strong>Merete Taule</strong> Nordliveien 10 / 0571 Oslo / Norway
+            <br><a href="mailto:meretetaule@me.com">meretetaule@me.com</a></p>
         </footer>
     </div>
 
